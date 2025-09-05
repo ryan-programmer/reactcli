@@ -11,7 +11,8 @@ import ProfileScreen from "../screens/ProfileScreen";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { RootStackParamList } from "./types";
 import { Button, Text, View } from "react-native";
-import { Color } from "react-native/types_generated/Libraries/Animated/AnimatedExports";
+import DashboardScreen from "../screens/DashboardScreen/DashboardScreen";
+// import { Color } from "react-native/types_generated/Libraries/Animated/AnimatedExports";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<RootStackParamList>();
@@ -39,10 +40,8 @@ function Tabs() {
           return <Ionicons name={iconName} size={size} color={color} />;
         },
         tabBarInactiveTintColor: "gray",
-        
-      })}
-    >
-      <Tab.Screen name="Home" component={HomeScreen}   />
+      })}>
+      <Tab.Screen name="Home" component={DashboardScreen}   />
       
       <Tab.Screen name="Profile" component={ProfileScreen}     initialParams={{ name: "default" }}/>
     </Tab.Navigator>
@@ -57,6 +56,7 @@ function DrawerNavigator() {
              headerTitle: () => (
        <View style={{ flex: 1, alignItems: "center", justifyContent: "center",flexDirection:"row" }}>
         <Text style={{ fontSize: 18,color:'white' }}>My Title</Text>
+
       </View>
     ),
     // headerLeft: () => <Text>👈</Text>,
@@ -95,7 +95,8 @@ export default function AppNavigator() {
       <Stack.Navigator>
         {/* Entire drawer sits inside Stack */}
         <Stack.Screen
-          name="Home"
+          name="Home" 
+          
           component={DrawerNavigator}
           options={{ headerShown: false }}
         />

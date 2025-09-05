@@ -17,7 +17,7 @@ function App() {
     setTimeout(()=>{
     SplashScreen.hide()
 
-    },5000)
+    },2000)
   },[]);
   return (
    <AppNavigator/>
