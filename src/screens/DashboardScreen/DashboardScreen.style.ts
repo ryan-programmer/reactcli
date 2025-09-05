@@ -10,8 +10,8 @@ topBar:{
     flexDirection:"row",
     justifyContent:"space-between",
     alignItems:"center",
-    borderWidth:1,
-    borderColor:"red",
+    // borderWidth:1,
+    // borderColor:"red",
     padding:10
 },
 currAccount:{
@@ -73,8 +73,16 @@ quickActionsCircle:{
     borderRadius:30
 },
 profileCircle:{
-    backgroundColor:"red",
-    padding:10,
-    borderRadius:20
+    backgroundColor:"#951c07",
+    color:"white",
+    padding:8,
+    borderRadius:18
+},
+tapbarRight:{
+    flexDirection:"row",
+    justifyContent:"space-between",
+    // borderWidth:1,
+    // borderColor:"red",
+    gap:10    
 }
 })

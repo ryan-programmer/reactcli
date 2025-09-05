@@ -1,12 +1,18 @@
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 import styles from './DashboardScreen.style'
+import { logo, searchIcon } from '../../../assets/images'
 const DashboardScreen = () => {
   return (
     <View style={styles.container} >
       <View style={styles.topBar}>
-        <View style={styles.profileCircle}> <Text>CU</Text></View>
-        {/* <Image source={} /> */}
+        <View style={styles.profileCircle}> <Text style={{ color: "white" }}>CU</Text></View>
+
+        <View style={styles.tapbarRight}>
+          <Image source={searchIcon} style={{ height: 25, width: 25 }} />
+          <Image source={logo} style={{ height: 25, width: 25 }} />
+        </View>
+
       </View>
 
 
